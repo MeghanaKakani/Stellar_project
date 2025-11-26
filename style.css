@@ -1,20 +1,21 @@
+/* StarRail-Themed styles.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 :root {
-  --min-font: 16;
-  --max-font: 22;
-  --fluid-step: calc((var(--max-font) - var(--min-font)) * ((100vw - 320px) / (1280 - 320)));
-
-  --bg-dark: #0b0d17;
+  --bg-dark: #0a0b1a;
+  --bg-gradient: linear-gradient(135deg, #0a0b1a, #1c1d36);
   --accent: #6ac7ff;
-  --card-bg: #11131f;
+  --accent-hover: #9ddcff;
+  --card-bg: rgba(20, 20, 40, 0.85);
   --text: #e8ecf8;
+  --highlight: #ffcc33;
+  --font-main: 'Orbitron', sans-serif;
 }
 
 body {
-  font-family: 'Orbitron', sans-serif;
-  background: var(--bg-dark);
+  font-family: var(--font-main);
+  background: var(--bg-gradient);
   color: var(--text);
   margin: 0;
   padding: 0;
@@ -25,6 +26,8 @@ body {
   text-align: center;
   padding: 2rem 1rem;
   border-bottom: 2px solid var(--accent);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .nav a {
@@ -32,10 +35,12 @@ body {
   color: var(--accent);
   text-decoration: none;
   font-weight: 700;
+  transition: 0.3s;
 }
 
 .nav a:hover {
-  text-shadow: 0 0 10px var(--accent);
+  color: var(--accent-hover);
+  text-shadow: 0 0 10px var(--accent-hover);
 }
 
 /* Sections */
@@ -49,7 +54,8 @@ body {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-align: center;
-  color: var(--accent);
+  color: var(--highlight);
+  text-shadow: 0 0 10px var(--accent);
 }
 
 /* Character Cards */
@@ -66,11 +72,12 @@ body {
   text-align: center;
   border: 1px solid var(--accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .char-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px var(--accent);
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--accent);
 }
 
 .char-img {
@@ -110,17 +117,18 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--accent);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .menu-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px var(--accent);
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px var(--accent);
 }
 
-.legendary-box { background: #1a0e0e; }
-.epic-box { background: #10121c; }
-.rare-box { background: #121a1f; }
-.tips-box { background: #111419; }
+.legendary-box { background: rgba(28, 10, 10, 0.85); }
+.epic-box { background: rgba(10, 18, 28, 0.85); }
+.rare-box { background: rgba(12, 18, 25, 0.85); }
+.tips-box { background: rgba(15, 14, 22, 0.85); }
 
 /* Gameplay Tips */
 .tips-list {
@@ -135,6 +143,6 @@ body {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--accent);
-  opacity: 0.8;
+  opacity: 0.9;
+  border-top: 1px solid var(--accent);
 }
-
