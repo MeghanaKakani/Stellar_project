@@ -1,72 +1,51 @@
-<!-- index.html for StarRail Project (Single Version) -->
+<!-- index.html (Home Page) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StarRail Characters</title>
+    <title>StarRail Home</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header class="site-header">
-        <h1>Honkai: Star Rail Character Guide</h1>
+        <h1>Honkai: Star Rail Database</h1>
         <nav class="nav">
-            <a href="#legendary">Legendary</a>
-            <a href="#epic">Epic</a>
-            <a href="#tips">Gameplay Tips</a>
+            <a href="index.html">Home</a>
+            <a href="legendary.html">Legendary</a>
+            <a href="epic.html">Epic</a>
+            <a href="rare.html">Rare</a>
+            <a href="tips.html">Gameplay Tips</a>
         </nav>
     </header>
 
     <main>
-        <section id="legendary" class="section">
-            <h2 class="section-title">Legendary Characters</h2>
-            <div class="card-grid">
+        <section class="section">
+            <h2 class="section-title">Choose a Category</h2>
 
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>Seele</h3>
-                    <p class="role">Role: Quantum DPS</p>
-                    <p class="ability">Ability: Buffed self-speed + multi-turn burst</p>
-                </div>
+            <div class="home-menu-grid">
 
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>Blade</h3>
-                    <p class="role">Role: HP-scaling DPS</p>
-                    <p class="ability">Ability: Consumes HP to deal massive AoE damage</p>
-                </div>
+                <a href="legendary.html" class="menu-box legendary-box">
+                    <h3>Legendary Characters</h3>
+                    <p>Top-tier units with the strongest abilities.</p>
+                </a>
 
-            </div>
-        </section>
+                <a href="epic.html" class="menu-box epic-box">
+                    <h3>Epic Characters</h3>
+                    <p>Powerful and reliable allies for all teams.</p>
+                </a>
 
-        <section id="epic" class="section">
-            <h2 class="section-title">Epic Characters</h2>
-            <div class="card-grid">
+                <a href="rare.html" class="menu-box rare-box">
+                    <h3>Rare Characters</h3>
+                    <p>Beginner-friendly units with unique roles.</p>
+                </a>
 
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>Tingyun</h3>
-                    <p class="role">Role: Support</p>
-                    <p class="ability">Ability: Boosts ally ATK and restores energy</p>
-                </div>
-
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>March 7th</h3>
-                    <p class="role">Role: Shield/Freeze Support</p>
-                    <p class="ability">Ability: Reactive freeze + protective shields</p>
-                </div>
+                <a href="tips.html" class="menu-box tips-box">
+                    <h3>Gameplay Tips</h3>
+                    <p>Learn the essentials of team building and combat.</p>
+                </a>
 
             </div>
-        </section>
-
-        <section id="tips" class="section">
-            <h2 class="section-title">Gameplay Tips</h2>
-            <ul class="tips-list">
-                <li>Build a balanced team with damage, support, and sustain.</li>
-                <li>Use elemental weaknesses strategically to break enemies.</li>
-                <li>Focus on relic sets that match your character's path.</li>
-            </ul>
         </section>
     </main>
 
