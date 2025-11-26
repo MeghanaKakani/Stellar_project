@@ -1,46 +1,78 @@
-<!doctype html>
+<!-- index.html for StarRail Project (Single Version) -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Stellar</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Combo&family=Ribeye&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="./assets/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarRail Characters</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
-	<body>
-	<h1>Meghana Kakani</h1>
-	<h2>Stellar</h2>
-	<style>
-    body {
-      background-color: #f3e8ff; /* light lavender */
-      color: #2e0249; /* dark purple text */
-    }
-    h1 {
-      color: #7b2cbf; /* strong purple */
-    }
-    h2 {
-      color: #9d4edd; /* medium purple */
-    }
-    p {
-      color: #5a189a; /* deeper purple for body text */
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 20px;
-    }
-    th, td {
-      border: 2px solid #7b2cbf; /* purple border */
-      padding: 10px;
-      text-align: left;
-    }
-    th {
-      background-color: #c77dff; /* light purple header */
-      color: white;
-    }
-    td {
-      background-color: #e0aaff; /* soft lavender cells */
-    }
-  </style>
+<body>
+    <header class="site-header">
+        <h1>Honkai: Star Rail Character Guide</h1>
+        <nav class="nav">
+            <a href="#legendary">Legendary</a>
+            <a href="#epic">Epic</a>
+            <a href="#tips">Gameplay Tips</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="legendary" class="section">
+            <h2 class="section-title">Legendary Characters</h2>
+            <div class="card-grid">
+
+                <div class="char-card">
+                    <div class="char-img placeholder-img"></div>
+                    <h3>Seele</h3>
+                    <p class="role">Role: Quantum DPS</p>
+                    <p class="ability">Ability: Buffed self-speed + multi-turn burst</p>
+                </div>
+
+                <div class="char-card">
+                    <div class="char-img placeholder-img"></div>
+                    <h3>Blade</h3>
+                    <p class="role">Role: HP-scaling DPS</p>
+                    <p class="ability">Ability: Consumes HP to deal massive AoE damage</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="epic" class="section">
+            <h2 class="section-title">Epic Characters</h2>
+            <div class="card-grid">
+
+                <div class="char-card">
+                    <div class="char-img placeholder-img"></div>
+                    <h3>Tingyun</h3>
+                    <p class="role">Role: Support</p>
+                    <p class="ability">Ability: Boosts ally ATK and restores energy</p>
+                </div>
+
+                <div class="char-card">
+                    <div class="char-img placeholder-img"></div>
+                    <h3>March 7th</h3>
+                    <p class="role">Role: Shield/Freeze Support</p>
+                    <p class="ability">Ability: Reactive freeze + protective shields</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="tips" class="section">
+            <h2 class="section-title">Gameplay Tips</h2>
+            <ul class="tips-list">
+                <li>Build a balanced team with damage, support, and sustain.</li>
+                <li>Use elemental weaknesses strategically to break enemies.</li>
+                <li>Focus on relic sets that match your character's path.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">StarRail Project © 2025</footer>
+</body>
 </html>
+
+
+
