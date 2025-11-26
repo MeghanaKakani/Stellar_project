@@ -1,14 +1,10 @@
-/* styles.css for StarRail Project */
 
-/* Google Font Example (replace with downloaded fonts later) */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
 :root {
-  /* Fluid type scale */
   --min-font: 16;
   --max-font: 22;
   --fluid-step: calc((var(--max-font) - var(--min-font)) * ((100vw - 320px) / (1280 - 320)));
-  font-size: calc((var(--min-font) * 1px) + var(--fluid-step));
 
   --bg-dark: #0b0d17;
   --accent: #6ac7ff;
@@ -77,7 +73,6 @@ body {
   box-shadow: 0 0 20px var(--accent);
 }
 
-/* Placeholder character image */
 .char-img {
   width: 100%;
   height: 180px;
@@ -96,7 +91,38 @@ body {
   opacity: 0.5;
 }
 
-/* Gameplay tips */
+/* Home Page Menu */
+.home-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.menu-box {
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  background: var(--card-bg);
+  border: 1px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.legendary-box { background: #1a0e0e; }
+.epic-box { background: #10121c; }
+.rare-box { background: #121a1f; }
+.tips-box { background: #111419; }
+
+/* Gameplay Tips */
 .tips-list {
   max-width: 700px;
   margin: auto;
