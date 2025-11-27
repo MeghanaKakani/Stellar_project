@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.7;
-  background: #fafbff url('https://bgjar.com/assets/svg/wave-lines.svg') no-repeat center center fixed;
+  background: url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #222;
   margin: 0;
