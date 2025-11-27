@@ -1,57 +1,510 @@
-<!-- epic.html -->
-<!DOCTYPE html>
+<!--
+Honkai: Star Rail - Simple Multi-page Site
+Files included below (copy each into its own file):
+- index.html
+- characters.html
+- guides.html
+- about.html
+- styles.css
+- README (font/install instructions)
+
+Place font files (woff2/woff) in a folder named /fonts and images in /images.
+
+This template uses:
+- semantic HTML
+- consistent nav on every page
+- flexbox + CSS Grid
+- downloaded Google fonts via @font-face (place files in /fonts)
+- fluid type scale using clamp() (generator-based)
+-->
+
+<!-- index.html -->
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Epic Characters</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="site-header">
-        <h1>Epic Characters</h1>
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="legendary.html">Legendary</a>
-            <a href="epic.html">Epic</a>
-            <a href="rare.html">Rare</a>
-            <a href="tips.html">Gameplay Tips</a>
-        </nav>
-    </header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="guides.html">Guides</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <section class="section">
-            <h2 class="section-title">Reliable & Powerful Allies</h2>
-            <div class="card-grid">
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="hero-left">
+          <h1>Welcome to the Star Rail Fan Site</h1>
+          <p class="lead">A clean, responsive multi-page template inspired by the official style — simplified for learning and customization.</p>
+          <p><a class="btn" href="characters.html">Browse Characters</a></p>
+        </div>
+        <div class="hero-right" role="img" aria-label="Star Rail art placeholder">
+          <!-- Replace with an image in /images/hero.jpg -->
+          <div class="art-placeholder">Art</div>
+        </div>
+      </div>
+    </section>
 
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>Tingyun</h3>
-                    <p class="role">Lightning • Harmony</p>
-                    <p>Boosts ally ATK, restores energy, and supports burst-heavy teams.</p>
-                </div>
+    <section class="cards">
+      <h2>Quick Links</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>Characters</h3>
+          <p>Profiles, abilities, and build tips.</p>
+          <a href="characters.html" class="link">Explore</a>
+        </article>
+        <article class="card">
+          <h3>Guides</h3>
+          <p>Beginner guides and advanced strategies.</p>
+          <a href="guides.html" class="link">Read</a>
+        </article>
+        <article class="card">
+          <h3>About</h3>
+          <p>Project information and credits.</p>
+          <a href="about.html" class="link">Learn more</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>March 7th</h3>
-                    <p class="role">Ice • Preservation</p>
-                    <p>Applies shields, counters enemy attacks, and can freeze enemies.</p>
-                </div>
-
-                <div class="char-card">
-                    <div class="char-img placeholder-img"></div>
-                    <h3>Sampo</h3>
-                    <p class="role">Wind • Nihility</p>
-                    <p>Damage-over-time specialist who applies multiple debuffs.</p>
-                </div>
-
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">StarRail Project © 2025</footer>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 StarRailFan. This is a fan project — not affiliated with any developer.</p>
+    </div>
+  </footer>
 </body>
 </html>
+
+<!-- guides.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Guides</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="guides.html" class="active">Guides</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Guides</h1>
+    <p class="lead">Beginner-friendly and advanced guides laid out in a simple list.</p>
+
+    <section class="guides-list">
+      <article class="guide">
+        <h2>Getting Started</h2>
+        <p>Basic walkthrough and account tips for new players.</p>
+      </article>
+      <article class="guide">
+        <h2>Team Building 101</h2>
+        <p>Composition, synergy, and path interactions explained.</p>
+      </article>
+      <article class="guide">
+        <h2>Resource Management</h2>
+        <p>How to spend and save resources efficiently.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 StarRailFan.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- about.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — About</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="guides.html">Guides</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>About This Project</h1>
+    <p class="lead">A student fan project demonstrating HTML, CSS Grid & Flexbox, fluid typography, and local font usage.</p>
+
+    <section>
+      <h2>Credits</h2>
+      <ul>
+        <li>Design: You</li>
+        <li>Fonts: Downloaded from Google Webfonts Helper (place woff2 files in /fonts)</li>
+        <li>Images: Replace placeholder images in /images</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 StarRailFan.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- styles.css -->
+:root{
+  /* Colors */
+  --bg: #0b1020;
+  --card: #0f1724;
+  --muted: #9aa4bf;
+  --accent: linear-gradient(90deg,#7b61ff,#00d4ff);
+  --glass: rgba(255,255,255,0.04);
+
+  /* Fluid type scale (generator result) */
+  --fs-min: 14; /* px */
+  --fs-max: 20; /* px */
+  --vw-min: 320; /* viewport min for generator */
+  --vw-max: 1200; /* viewport max for generator */
+}
+
+/* Fluid base font (clamp) */
+html{font-family: 'InterVar','Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+:root{--fluid-base: clamp(calc(var(--fs-min) * 1px), calc((1rem + (var(--fs-max) - var(--fs-min)) * ((100vw - var(--vw-min)px) / (var(--vw-max) - var(--vw-min))))), calc(var(--fs-max) * 1px));}
+html{font-size: var(--fluid-base);} /* body font size responds fluidly */
+
+/* Utility container */
+.container{max-width:1100px;margin:0 auto;padding:1rem;}
+
+body{
+  margin:0;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(123,97,255,0.08), transparent), var(--bg);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Header / nav */
+.site-header{background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;}
+.brand{font-weight:700;font-size:1.15rem;text-decoration:none;color:inherit;}
+.main-nav a{margin-left:1.1rem;text-decoration:none;color:var(--muted);padding:0.35rem 0.45rem;border-radius:6px;font-weight:600}
+.main-nav a:hover,.main-nav a.active{color:#fff;background:var(--glass)}
+
+/* Hero */
+.hero{padding:2rem 0;}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:center}
+.hero-left h1{font-family:'Rajdhani', 'Inter', sans-serif;font-size:2.2rem;margin:0 0 .25rem}
+.lead{color:var(--muted);margin-top:0.35rem}
+.art-placeholder{height:220px;border-radius:12px;background:linear-gradient(180deg,#182033, #0d1320);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+
+.btn{display:inline-block;padding:0.65rem 1rem;border-radius:8px;background:var(--accent);background-size:200% 100%;text-decoration:none;font-weight:700;color:#09101a}
+
+/* Cards grid */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.card{background:var(--card);padding:1rem;border-radius:10px}
+.card h3{margin:0 0 .5rem}
+.link{font-weight:700}
+
+/* Roster Grid - uses CSS Grid */
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.char-card{display:flex;gap:1rem;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:0.8rem;border-radius:10px;align-items:center}
+.char-art{width:96px;height:96px;border-radius:8px;background:linear-gradient(180deg,#1b1f2b,#11141c);display:flex;align-items:center;justify-content:center}
+.char-info h3{margin:0}
+.subtitle{color:var(--muted);font-size:.95rem;margin-top:.15rem}
+.small-btn{display:inline-block;margin-top:.6rem;padding:.45rem .6rem;border-radius:8px;background:var(--glass);text-decoration:none}
+
+/* Guides list */
+.guides-list{display:flex;flex-direction:column;gap:.8rem}
+.guide{background:var(--card);padding:1rem;border-radius:8px}
+
+/* Footer */
+.site-footer{padding:1.2rem 0;color:var(--muted);font-size:.95rem;border-top:1px solid rgba(255,255,255,0.02);}
+
+/* Responsive adjustments using flexbox for small screens */
+@media (max-width:800px){
+  .hero-grid{grid-template-columns:1fr;}
+  .main-nav{display:flex;gap:.5rem}
+}
+
+/* Accessibility helpers */
+a:focus{outline:3px solid rgba(125,200,255,0.15);outline-offset:3px}
+
+/* Simple utility */
+h1,h2,h3{line-height:1.1;color:#fff}
+
+/* Example @font-face declarations — replace with real files downloaded via Google Webfonts Helper */
+@font-face{font-family:'InterVar';font-style:normal;font-weight:100 900;src:local('Inter'), url('/fonts/inter-regular.woff2') format('woff2');font-display:swap}
+@font-face{font-family:'Rajdhani';font-style:normal;font-weight:400 700;src:local('Rajdhani'), url('/fonts/rajdhani-regular.woff2') format('woff2');font-display:swap}
+
+/* End of stylesheet */
+
+
+<!-- README: font + asset instructions -->
+
+/*
+README - Fonts & Assets
+
+1) Visit https://google-webfonts-helper.herokuapp.com/ (or Google Webfonts Helper) and select the fonts you want (e.g., Inter, Rajdhani).
+2) Choose the character sets and weights you need, then download the files (woff2 recommended).
+3) Extract and place the files into a folder in your project named /fonts.
+   Example: /fonts/inter-regular.woff2  /fonts/rajdhani-regular.woff2
+4) Update the paths in styles.css @font-face rules if you use different filenames.
+
+Images: put hero and character images into /images and replace the placeholders.
+
+Notes on fluid type: The stylesheet uses a clamp based fluid scale for the root font size. You can adjust --fs-min and --fs-max values in :root to change the scale.
+*/
+
+<!-- skins.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Skins</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="skins.html" class="active">Skins</a>
+        <a href="guides.html">Guides</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Skins</h1>
+    <p class="lead">A dedicated page for character skins, costumes, and recolors.</p>
+
+    <section class="skins-grid">
+      <article class="skin-card">
+        <div class="skin-art">Img</div>
+        <div class="skin-info">
+          <h3>Skin Name</h3>
+          <p class="subtitle">Character • Theme</p>
+          <p>A short description of the skin.</p>
+        </div>
+      </article>
+
+      <article class="skin-card">
+        <div class="skin-art">Img</div>
+        <div class="skin-info">
+          <h3>Another Skin</h3>
+          <p class="subtitle">Character • Theme</p>
+          <p>Description of this alternate appearance.</p>
+        </div>
+      </article>
+
+      <!-- Add as many skins as you like -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 StarRailFan.</p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+<!-- relics.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Relics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="skins.html">Skins</a>
+        <a href="relics.html" class="active">Relics</a>
+        <a href="lightcones.html">Light Cones</a>
+        <a href="teams.html">Teams</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Relics</h1>
+    <p class="lead">Browse relic sets and their effects.</p>
+    <section class="grid">
+      <article class="card">
+        <h3>Relic Set Name</h3>
+        <p>2‑Piece Bonus: ...</p>
+        <p>4‑Piece Bonus: ...</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 StarRailFan.</p></div></footer>
+</body>
+</html>
+
+<!-- lightcones.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Light Cones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="skins.html">Skins</a>
+        <a href="relics.html">Relics</a>
+        <a href="lightcones.html" class="active">Light Cones</a>
+        <a href="teams.html">Teams</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Light Cones</h1>
+    <p class="lead">View a collection of all Light Cones.</p>
+    <section class="grid">
+      <article class="card">
+        <h3>Light Cone Name</h3>
+        <p>Path: ...</p>
+        <p>Effect: ...</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 StarRailFan.</p></div></footer>
+</body>
+</html>
+
+<!-- teams.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Teams</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="skins.html">Skins</a>
+        <a href="relics.html">Relics</a>
+        <a href="lightcones.html">Light Cones</a>
+        <a href="teams.html" class="active">Teams</a>
+        <a href="events.html">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Teams</h1>
+    <p class="lead">Suggested meta and fun team compositions.</p>
+    <section class="grid">
+      <article class="card">
+        <h3>Team Name</h3>
+        <p>Team Members: ...</p>
+        <p>Strategy: ...</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 StarRailFan.</p></div></footer>
+</body>
+</html>
+
+<!-- events.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Honkai: Star Rail — Events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">StarRailFan</a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="characters.html">Characters</a>
+        <a href="skins.html">Skins</a>
+        <a href="relics.html">Relics</a>
+        <a href="lightcones.html">Light Cones</a>
+        <a href="teams.html">Teams</a>
+        <a href="events.html" class="active">Events</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Events</h1>
+    <p class="lead">Current and upcoming in‑game events.</p>
+    <section class="grid">
+      <article class="card">
+        <h3>Event Name</h3>
+        <p>Date: ...</p>
+        <p>Description: ...</p>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>&copy; 2025 StarRailFan.</p></div></footer>
+</body>
+</html>
+
 
 
 
