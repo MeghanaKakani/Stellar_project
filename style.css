@@ -1,148 +1,263 @@
-/* StarRail-Themed styles.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-:root {
-  --bg-dark: #0a0b1a;
-  --bg-gradient: linear-gradient(135deg, #0a0b1a, #1c1d36);
-  --accent: #6ac7ff;
-  --accent-hover: #9ddcff;
-  --card-bg: rgba(20, 20, 40, 0.85);
-  --text: #e8ecf8;
-  --highlight: #ffcc33;
-  --font-main: 'Orbitron', sans-serif;
-}
-
 body {
-  font-family: var(--font-main);
-  background: var(--bg-gradient);
-  color: var(--text);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  background: #fafbff url('https://bgjar.com/assets/svg/wave-lines.svg') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
   margin: 0;
   padding: 0;
 }
 
-/* Header */
-.site-header {
+/* ===== Header ===== */
+header {
   text-align: center;
-  padding: 2rem 1rem;
-  border-bottom: 2px solid var(--accent);
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 2em 1em;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-.nav a {
-  margin: 0 1rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 700;
-  transition: 0.3s;
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  color: #2e64fe;
+  margin-bottom: 0.5em;
 }
 
-.nav a:hover {
-  color: var(--accent-hover);
-  text-shadow: 0 0 10px var(--accent-hover);
-}
-
-/* Sections */
-.section {
-  padding: 3rem 1rem;
-  max-width: 1200px;
+.summary {
+  max-width: 700px;
   margin: auto;
+  font-size: 1.1em;
+  color: #333;
 }
 
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: var(--highlight);
-  text-shadow: 0 0 10px var(--accent);
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5em;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
 }
 
-/* Character Cards */
-.card-grid {
+nav a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  color: #2e64fe;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff4081;
+}
+
+/* ===== Gallery ===== */
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+  padding: 2em;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.movie {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 1em;
+  transition: transform 0.3s ease;
+}
+
+.movie:hover {
+  transform: scale(1.05);
+}
+
+.movie img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 10px;
+}
+
+.movie h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2em;
+  color: #ff4081;
+  margin-top: 0.5em;
+}
+
+.movie p {
+  font-size: 0.95em;
+  color: #444;
+  padding: 0 0.5em;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* ===== Enhanced Star Rail Styling ===== */
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  background: linear-gradient(135deg,#6c8cff,#3a4cd6);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Character / Card Styling */
+.card {
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  padding: 1.2em;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 14px;
+  margin-bottom: 0.7em;
+}
+
+/* Star Rail Gradient Titles */
+h1, h2, h3 {
+  background: linear-gradient(135deg,#3a4cd6,#8aa6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navigation Glow */
+.main-nav a:hover {
+  color: #8aa6ff;
+  text-shadow: 0 0 10px rgba(140,160,255,0.8);
+}
+
+
+/* ===== STAR RAIL THEME PACK ===== */
+
+/* Background Options — pick one or keep all for future swapping */
+:root {
+  --bg-main: url('https://static.wikia.nocookie.net/houkai-star-rail/images/3/39/Astral_Express.png');
+}
+
+body {
+  background: #fafbff var(--bg-main) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Transparent Glass Panels */
+.glass {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(255,255,255,0.15);
+}
+
+/* ===== Character Grid ===== */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
+  padding: 2rem;
 }
 
 .char-card {
-  background: var(--card-bg);
-  padding: 1.5rem;
-  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
   text-align: center;
-  border: 1px solid var(--accent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(5px);
 }
 
 .char-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px var(--accent);
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.22);
 }
 
-.char-img {
+.char-card img {
   width: 100%;
-  height: 180px;
-  background: #222536;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--accent);
-  font-size: 1rem;
+  height: 260px;
+  object-fit: cover;
 }
 
-.placeholder-img::after {
-  content: "Character Art";
-  opacity: 0.5;
+.char-card h3 {
+  margin: 0.6em 0;
+  font-size: 1.3em;
 }
 
-/* Home Page Menu */
-.home-menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: auto;
+/* Star Rail rarity borders */
+.rarity-5 {
+  border: 3px solid #ffb347;
+  box-shadow: 0 0 14px rgba(255, 179, 71, 0.7);
 }
 
-.menu-box {
-  padding: 2rem;
-  border-radius: 15px;
+.rarity-4 {
+  border: 3px solid #b27bff;
+  box-shadow: 0 0 14px rgba(178, 123, 255, 0.7);
+}
+
+/* ===== Path Icons Styling ===== */
+.path-icon {
+  width: 40px;
+  height: 40px;
+  margin-top: 0.5rem;
+  filter: drop-shadow(0 0 6px rgba(0,0,0,0.3));
+}
+
+/* ===== Page Headers ===== */
+.page-header {
   text-align: center;
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 700;
-  background: var(--card-bg);
-  border: 1px solid var(--accent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(5px);
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, rgba(60,100,230,0.6), rgba(140,160,255,0.4));
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(255,255,255,0.4);
 }
 
-.menu-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px var(--accent);
+.page-header h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
 }
 
-.legendary-box { background: rgba(28, 10, 10, 0.85); }
-.epic-box { background: rgba(10, 18, 28, 0.85); }
-.rare-box { background: rgba(12, 18, 25, 0.85); }
-.tips-box { background: rgba(15, 14, 22, 0.85); }
-
-/* Gameplay Tips */
-.tips-list {
-  max-width: 700px;
-  margin: auto;
-  list-style: square;
-  line-height: 1.8;
-}
-
-/* Footer */
-.footer {
+/* ===== Footer Glow ===== */
+footer {
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(8px);
+  padding: 1rem;
   text-align: center;
-  padding: 2rem 1rem;
-  color: var(--accent);
-  opacity: 0.9;
-  border-top: 1px solid var(--accent);
+  font-size: 0.9rem;
+  border-top: 2px solid rgba(255,255,255,0.4);
 }
