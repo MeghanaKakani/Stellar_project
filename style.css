@@ -71,7 +71,7 @@ header p.summary {
 }
 body {
   background-color: #1a1a1a; /* your color */
-  background-image: url("pattern.png"); /* your pattern file */
+  background-image: url("black-rhombus-background.png"); /* your pattern file */
   background-repeat: repeat; /* repeats pattern */
 }
 /* Optional border colors */
