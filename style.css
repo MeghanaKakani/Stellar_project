@@ -67,23 +67,22 @@ header p.summary {
 
 /* === Character Grid === */
 .char-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  display: flex;           /* makes children align in a row */
+  flex-wrap: wrap;         /* allows them to go to next line if needed */
+  gap: 1rem;               /* space between cards */
+  justify-content: center; /* center the row */
   padding: 1rem;
-  justify-items: center;
 }
 
 .char-card {
-  width: 180px;
-  height: 250px;
+  flex: 0 0 180px;         /* fixed width, won’t shrink */
+  height: 250px;           /* fixed height */
   text-align: center;
-  overflow: hidden;
   border-radius: 12px;
-  background-color: rgba(50, 0, 100, 0.6);
+  background-color: rgba(50,0,100,0.6);
   border: 2px solid #5e5eff;
   padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;     /* space between rows */
 }
 
 .char-card:hover {
