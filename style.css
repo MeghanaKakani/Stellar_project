@@ -128,7 +128,7 @@ footer {
 }
 
 .logo {
-  width: 70px;          /* size of the logo */
+  width: 200px;          /* size of the logo */
   height: auto;
   animation: logoPop 1s ease-out, floaty 3s ease-in-out infinite;
 }
