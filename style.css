@@ -119,6 +119,40 @@ footer {
   background-color: rgba(0, 0, 50, 0.7);
   color: #bbb;
 }
+/* === Logo Area === */
+.logo-area {
+  position: fixed;      /* stays in top-left even when scrolling */
+  top: 10px;
+  left: 10px;
+  z-index: 999;         /* stays above everything */
+}
+
+.logo {
+  width: 70px;          /* size of the logo */
+  height: auto;
+  animation: logoPop 1s ease-out, floaty 3s ease-in-out infinite;
+}
+
+/* First animation: pop in */
+@keyframes logoPop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes floaty {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
 
 
 
