@@ -1,83 +1,23 @@
-/* === General Styles === */
+/* ===== Google Fonts Setup ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;500&display=swap');
+
+/* ===== Fluid Type Scale ===== */
+html {
+  font-size: clamp(14px, 1.2vw, 18px);
+}
+
+/* ===== Body ===== */
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
-  margin: 0;
-  background: linear-gradient(135deg, #1a1a2e, #3a0ca3);
+  background-color: #1a1a2e; /* dark blue/purple base */
   color: #fff;
-}
-
-header {
-  text-align: center;
-  padding: 2em 1em;
-  background-color: rgba(50, 0, 100, 0.6);
-}
-
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
-  color: #b3b3ff;
-}
-
-header p.summary {
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: auto;
-}
-
-/* === Navigation === */
-.main-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 1em;
-  background-color: rgba(0, 0, 50, 0.7);
-}
-
-.main-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.main-nav a.active, .main-nav a:hover {
-  background-color: #5e5eff;
-}
-
-/* === Character Grid === */
-.char-card img {
-  width: 100%;
-  height: auto;
-}
-.char-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.char-card {
-  background-color: rgba(50, 0, 100, 0.6);
-  border-radius: 12px;
-  padding: 10px;
-  text-align: center;
-  border: 2px solid #5e5eff;
-}
-
-.char-card {
-  width: 180px;     /* or any width you like */
-  height: 250px;    /* makes all cards the same height */
-  text-align: center;
-  overflow: hidden; /* ensures nothing sticks out */
-  background-color: rgba(255,255,255,0.1); /* optional */
-  border-radius: 12px;
-}
-body {
-  background-color: #222; /* your main color */
   position: relative;
 }
 
+/* Background pattern */
 body::before {
   content: "";
   position: fixed;
@@ -85,22 +25,103 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("images/black-rhombus-background.png");
+  background-image: url('pattern.png'); /* your PNG pattern */
   background-repeat: repeat;
-  opacity: 0.6;     /* ← LOWER = lighter */
+  opacity: 0.1;  /* make pattern light */
   pointer-events: none;
   z-index: -1;
 }
-/* Optional border colors */
-.five-star { border-color: gold; }
-.four-star { border-color: #7aa0ff; }
-.special { border-color: violet; }
 
-/* === Footer === */
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(to right, #4e54c8, #8f94fb); /* futuristic gradient */
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+  max-width: 700px;
+  margin: auto;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(50, 50, 80, 0.9);
+  padding: 0.5rem 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* ===== Character Grid ===== */
+.char-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* ===== Character Card ===== */
+.char-card {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.char-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.char-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain; /* ensures whole image fits */
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.char-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  margin: 0.5rem 0;
+  color: #ffcc00;
+}
+
+.char-card .path-icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 0.2rem;
+}
+
+/* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 1em;
-  background-color: rgba(0, 0, 50, 0.7);
-  color: #bbb;
+  padding: 1rem;
+  background-color: rgba(50, 50, 80, 0.9);
+  font-size: 0.9rem;
+  color: #ccc;
 }
+
 
