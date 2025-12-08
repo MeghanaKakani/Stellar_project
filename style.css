@@ -126,15 +126,6 @@ footer {
   left: 10px;
   z-index: 999;         /* stays above everything */
 }
-
-.logo {
-  position: fixed;
-  top: 15px;        /* distance from the top */
-  left: 15px;       /* distance from the left */
-  width: 200px;     /* adjust size as needed */
-  z-index: 1000;    /* keeps it above other elements */
-}
-
 /* First animation: pop in */
 @keyframes logoPop {
   0% {
@@ -149,11 +140,30 @@ footer {
     transform: scale(1);
   }
 }
-@keyframes floaty {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-  100% { transform: translateY(0); }
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 200px;
+  z-index: 1000;
+
+  /* Glow animation */
+  animation: glowPulse 2s infinite ease-in-out;
 }
+
+/* Glow animation keyframes */
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 0 0px #ffffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #ffffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 0px #ffffff);
+  }
+}
+
 .hero-image img {
   width: 100%;
   height: auto;
