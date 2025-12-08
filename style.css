@@ -128,15 +128,10 @@ footer {
 }
 
 .logo {
-  width: 200px;          /* size of the logo */
-  height: auto;
-  animation: logoPop 1s ease-out, floaty 3s ease-in-out infinite;
-}
-.logo {
   position: fixed;
   top: 15px;        /* distance from the top */
   left: 15px;       /* distance from the left */
-  width: 120px;     /* adjust size as needed */
+  width: 200px;     /* adjust size as needed */
   z-index: 1000;    /* keeps it above other elements */
 }
 
