@@ -1,5 +1,6 @@
-/* ===================================================== */
-/* === VARIABLES & FLUID TYPE SCALE === */
+/* ================================ */
+/* === Root & Fluid Type Scale === */
+/* ================================ */
 :root {
   --step--2: clamp(0.72rem, 0.69rem + 0.15vw, 0.8rem);
   --step--1: clamp(0.85rem, 0.82rem + 0.18vw, 0.95rem);
@@ -10,32 +11,36 @@
   --step-4: clamp(2.44rem, 2.3rem + 0.5vw, 2.75rem);
 }
 
-/* ===================================================== */
-/* === FONTS === */
+/* ================================ */
+/* === Fonts === */
 @font-face {
   font-family: 'Inter Tight';
   src: url('fonts/inter-tight-v9-latin-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Inter Tight';
   src: url('fonts/inter-tight-v9-latin-600.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Orbitron';
   src: url('fonts/orbitron-v35-latin-regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Orbitron';
   src: url('fonts/orbitron-v35-latin-500.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Orbitron';
   src: url('fonts/orbitron-v35-latin-700.woff2') format('woff2');
@@ -43,8 +48,8 @@
   font-style: normal;
 }
 
-/* ===================================================== */
-/* === BODY & TYPOGRAPHY === */
+/* ================================ */
+/* === Body & Typography === */
 body {
   font-family: 'Inter Tight', sans-serif;
   font-size: var(--step-0);
@@ -55,30 +60,67 @@ body {
   position: relative;
 }
 
-/* Fluid type for headings */
-h1 { font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: var(--step-4); letter-spacing: 2px; text-transform: uppercase; }
-h2 { font-family: 'Orbitron', sans-serif; font-weight: 600; font-size: var(--step-3); }
-h3 { font-family: 'Orbitron', sans-serif; font-weight: 500; font-size: var(--step-1); margin: 0.3rem 0; color: #ffcc00; }
-p { font-size: var(--step--1); }
+/* Pattern overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/black-rhombus-background.png");
+  background-repeat: repeat;
+  background-size: auto;
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
+}
 
-/* ===================================================== */
-/* === HEADER === */
+h1, h2, h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: var(--step-4);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: var(--step-3);
+}
+
+h3 {
+  font-size: var(--step-1);
+}
+
+/* Paragraphs */
+p {
+  font-size: var(--step--1);
+}
+
+/* ================================ */
+/* === Header === */
 header {
   text-align: center;
   padding: 2em 1em;
   background-color: rgba(50, 0, 100, 0.6);
 }
+
 header h1 {
+  font-family: 'Orbitron', sans-serif;
   color: #b3b3ff;
 }
+
 header p.summary {
   font-size: 1.1em;
   max-width: 700px;
   margin: auto;
 }
 
-/* ===================================================== */
-/* === NAVIGATION === */
+/* ================================ */
+/* === Navigation === */
 .main-nav {
   display: flex;
   justify-content: center;
@@ -86,6 +128,7 @@ header p.summary {
   padding: 1em;
   background-color: rgba(0, 0, 50, 0.7);
 }
+
 .main-nav a {
   text-decoration: none;
   color: #fff;
@@ -93,17 +136,45 @@ header p.summary {
   padding: 5px 10px;
   border-radius: 5px;
 }
+
 .main-nav a.active,
 .main-nav a:hover {
   background-color: #5e5eff;
 }
 
-/* ===================================================== */
-/* === CHARACTER GRID === */
+/* ================================ */
+/* === Logo === */
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 200px;
+  z-index: 1000;
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { filter: drop-shadow(0 0 0px #ffffff); }
+  50% { filter: drop-shadow(0 0 10px #ffffff); }
+  100% { filter: drop-shadow(0 0 0px #ffffff); }
+}
+
+/* ================================ */
+/* === Hero Image === */
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+
+/* ================================ */
+/* === Character Grid === */
 .character-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px;
   justify-content: flex-start;
   padding: 20px;
 }
@@ -117,18 +188,20 @@ header p.summary {
   border: 2px solid #5e5eff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .char-card:hover {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
-/* Character image wrapper for element icons */
+/* Character image wrapper for element icon */
 .char-image {
   position: relative;
   width: 100%;
   height: 150px;
   margin-bottom: 0.5rem;
 }
+
 .char-image img.character-img {
   width: 100%;
   height: 100%;
@@ -136,19 +209,19 @@ header p.summary {
   border-radius: 10px;
 }
 
-/* Element icons */
+/* Element icon */
 .element-icon {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  top: 6px;
+  right: 6px;
   width: 28px;
   height: 28px;
-  object-fit: contain;
+  padding: 2px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.5);
+  object-fit: contain;
   z-index: 2;
 }
-/* Glow effects per element */
+
 .element-icon.fire { filter: drop-shadow(0 0 6px #ff6b6b); }
 .element-icon.ice { filter: drop-shadow(0 0 6px #6bcfff); }
 .element-icon.lightning { filter: drop-shadow(0 0 6px #ffd93d); }
@@ -157,45 +230,54 @@ header p.summary {
 .element-icon.imaginary { filter: drop-shadow(0 0 6px #ffd166); }
 .element-icon.physical { filter: drop-shadow(0 0 6px #cccccc); }
 
-/* Rarity borders */
-.five-star { border-color: gold; }
-.four-star { border-color: #7aa0ff; }
-.special { border-color: violet; }
-
-/* ===================================================== */
-/* === HERO IMAGE === */
-.hero-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px 0;
-  border-radius: 12px;
+/* Character name */
+.char-card h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1em;
+  margin: 0.3rem 0;
+  color: #ffcc00;
 }
 
-/* ===================================================== */
-/* === PATHS / TABS === */
+/* ================================ */
+/* === Paths Section (Horizontal) === */
 .paths-container {
   padding: 2rem;
 }
+
 .path-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
   margin-bottom: 3rem;
 }
+
+.path-card {
+  background-color: rgba(50, 0, 100, 0.6);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  flex: 0 0 200px;
+  border: 2px solid #5e5eff;
+}
+
 .path-title {
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: 'Orbitron', sans-serif;
   color: #cdb4ff;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
+
 .path-icon {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
-/* ===================================================== */
-/* === FOOTER === */
+/* ================================ */
+/* === Footer === */
 footer {
   text-align: center;
   padding: 1em;
@@ -203,20 +285,5 @@ footer {
   color: #bbb;
 }
 
-/* ===================================================== */
-/* === LOGO === */
-.logo {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  width: 200px;
-  z-index: 1000;
-  animation: glowPulse 2s infinite ease-in-out;
-}
-@keyframes glowPulse {
-  0% { filter: drop-shadow(0 0 0px #ffffff); }
-  50% { filter: drop-shadow(0 0 10px #ffffff); }
-  100% { filter: drop-shadow(0 0 0px #ffffff); }
-}
 
 
