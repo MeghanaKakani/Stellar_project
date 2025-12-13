@@ -1,3 +1,4 @@
+
 /* === General Styles === */
 body {
   font-family: 'Open Sans', sans-serif;
@@ -227,3 +228,10 @@ footer {
 .element-icon.physical {
   filter: drop-shadow(0 0 6px #cccccc);
 }
+/* Force element icon size (override card image rule) */
+.char-card .element-icon {
+  width: 28px !important;
+  height: 28px !important;
+  object-fit: contain;
+}
+
