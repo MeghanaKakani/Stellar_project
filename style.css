@@ -211,5 +211,20 @@ footer {
 .char-card p {
   font-size: 0.9rem;
 }
+/* Path title with image */
+.path-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Montserrat', sans-serif;
+  color: #cdb4ff;
+  margin-bottom: 1rem;
+}
 
+/* Icon next to title */
+.path-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
 
