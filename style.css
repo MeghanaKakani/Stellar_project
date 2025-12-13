@@ -1,4 +1,96 @@
 
+/* === Fluid Type Scale === */
+/* Generated using https://baseline.is/tools/type-scale-generator/ */
+
+:root {
+  --step--2: clamp(0.78rem, 0.74rem + 0.2vw, 0.88rem);
+  --step--1: clamp(0.94rem, 0.89rem + 0.25vw, 1.05rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.3vw, 1.125rem);
+  --step-1:  clamp(1.25rem, 1.15rem + 0.6vw, 1.5rem);
+  --step-2:  clamp(1.56rem, 1.4rem + 1vw, 1.95rem);
+  --step-3:  clamp(1.95rem, 1.7rem + 1.4vw, 2.44rem);
+  --step-4:  clamp(2.44rem, 2.1rem + 2vw, 3.05rem);
+}
+/* === Local Fonts (Google Webfonts Helper) === */
+
+/* montserrat-600 */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/montserrat-v25-latin-600.woff2') format('woff2');
+}
+
+/* montserrat-700 */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/montserrat-v25-latin-700.woff2') format('woff2');
+}
+
+/* open-sans-regular */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/open-sans-v40-latin-regular.woff2') format('woff2');
+}
+
+/* open-sans-600 */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/open-sans-v40-latin-600.woff2') format('woff2');
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+nav a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--step-0);
+}
+
+header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--step-4);
+}
+
+header p.summary {
+  font-size: var(--step-1);
+}
+
+.main-nav a {
+  font-size: var(--step--1);
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--step-3);
+}
+
+.char-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: var(--step-1);
+}
+
+.char-card p {
+  font-size: var(--step--1);
+}
+
+footer {
+  font-size: var(--step--2);
+}
+
 /* === General Styles === */
 body {
   font-family: 'Open Sans', sans-serif;
