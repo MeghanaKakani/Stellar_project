@@ -180,6 +180,7 @@ header p.summary { max-width: 700px; margin: auto; }
 
 /* === Logo === */
 .logo {
+  transform-origin: center center;
   position: fixed;
   top: 15px;
   left: 15px;
